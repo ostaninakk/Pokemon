@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.pokemon.ui.main.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_searchPokemonFragment"
+            app:destination="@id/searchPokemonFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_menuFragment_to_randomPokemonFragment"
+            app:destination="@id/randomPokemonFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_menuFragment_to_favouritePokemonFragment"
+            app:destination="@id/favouritePokemonFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchPokemonFragment"
+        android:name="com.example.pokemon.ui.main.SearchPokemonFragment"
+        android:label="fragment_search_pokemon"
+        tools:layout="@layout/fragment_search_pokemon" />
+    <fragment
+        android:id="@+id/randomPokemonFragment"
+        android:name="com.example.pokemon.ui.main.RandomPokemonFragment"
+        android:label="RandomPokemonFragment" />
+    <fragment
+        android:id="@+id/favouritePokemonFragment"
+        android:name="com.example.pokemon.ui.main.FavouritePokemonFragment"
+        android:label="fragment_favourite_pokemon"
+        tools:layout="@layout/fragment_favourite_pokemon" />
+</navigation>
